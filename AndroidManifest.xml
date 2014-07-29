@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.chatup_demo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="19" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.chatup_demo.SplashScreen"
+            android:label="@string/app_name"
+              android:windowSoftInputMode="stateHidden" 
+              android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.chatup_demo.New_user_registration"
+            android:label="@string/app_name" 
+            android:windowSoftInputMode="stateHidden" 
+              android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar">
+            
+            
+        </activity>
+         <activity
+            android:name="com.example.chatup_demo.MainActivity"
+            android:label="@string/app_name" >
+            
+            
+        </activity>
+         <activity
+            android:name="com.example.chatup_demo.ThirdParty"
+            android:label="@string/app_name" 
+            android:windowSoftInputMode="stateHidden" 
+              android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar">
+            
+            
+        </activity>
+        <activity android:name=".SearchResultsActivity"
+            android:parentActivityName="info.androidhive.actionbar.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity android:name="com.example.chatup_demo.Chatlist"
+             android:label="@string/app_name" >
+          <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SearchResultsActivity" />
+          </activity>
+          <activity android:name="com.example.chatup_demo.FriendlistClass"
+             android:label="@string/app_name" >
+          <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SearchResultsActivity" />
+          
+         
+          </activity>  
+           <activity
+            android:name="com.example.chatup_demo.ListviewAct"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden" 
+            >
+            </activity>    
+       <receiver
+            android:name="com.example.internetconnectivity.NetworkChangeReceiver"
+            android:label="NetworkChangeReceiver" >
+            <intent-filter>
+                <action android:name="InternetBroadcast" />
+               <!--  <action android:name="android.net.wifi.WIFI_STATE_CHANGED" /> -->
+            </intent-filter>
+        </receiver>  
+        <activity
+            android:name="com.example.addcontacts.Friend_list_activity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden" 
+            />
+        <activity 
+            android:name="veer.example.fileselector.FileSelectionActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity 
+            android:name="com.example.settings.Settings_activity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity 
+            android:name="com.example.settings.Profile_photo_activity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity 
+            android:name="com.example.settings.Help"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+
+    <ImageView
+        android:id="@+id/imageView1"
+      android:layout_width="50dip"
+      android:layout_height="50dip"
+      android:adjustViewBounds="true"
+     android:layout_marginLeft="16dp"
+        
+        android:layout_marginTop="8dp"
+        android:src="@drawable/veer" />
+    <LinearLayout 
+       android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_marginTop="12dip"
+        android:layout_marginLeft="15dp"
+        
+        android:text="TextView" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+         <ImageView
+        android:id="@+id/whosent"
+      android:layout_width="10dip"
+      android:layout_height="10dip"
+      android:adjustViewBounds="true"
+     android:layout_marginLeft="16dp"
+        
+        android:layout_marginTop="8dp"
+        android:src="@drawable/veer" />
+        
+    <TextView
+        android:id="@+id/textmsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_marginLeft="25dp"
+        
+        android:text="TextView" /></LinearLayout>
+    </LinearLayout>
+ </LinearLayout>
+
+
